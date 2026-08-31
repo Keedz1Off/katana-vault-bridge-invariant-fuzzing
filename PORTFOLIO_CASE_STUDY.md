@@ -6,8 +6,6 @@ This repository shows what I tested: real Foundry stateful/stateless fuzz tests 
 
 Confirmed findings are reported privately through the relevant bug-bounty platform. A public write-up is released only after the fix and responsible-disclosure approval.
 
-![Stateful versus stateless fuzzing](docs/assets/stateful-vs-stateless.png)
-
 ## Stateful tests and invariants
 
 ### `test/invariant/KatanaVaultBridgeStatefulInvariant.t.sol`
@@ -94,11 +92,3 @@ Stateless: 11 passed, 0 failed
 ```
 
 These are local-mock results, not a guarantee that the live protocol is bug-free.
-
-## Run
-
-```bash
-export PATH="$HOME/.foundry/bin:$PATH"
-forge test --match-path 'test/invariant/*.t.sol' --fuzz-runs 1000 -v --summary
-forge test --match-path 'test/fuzz/*.t.sol' --fuzz-runs 10000 -v --summary
-```
