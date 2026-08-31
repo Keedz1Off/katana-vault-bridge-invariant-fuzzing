@@ -17,15 +17,15 @@ Notation: $B_t$ = converter backing, $U_t(x)$ = underlying balance, $S_t$ = cust
 
 - Technical — `invariant_converterNeverHoldsLessThanBacking`
 
-  $$U_t(C) ge B_t$$
+  $$U_t(C) \ge B_t$$
 
 - Technical — `invariant_handlerBalanceIsBoundedBySupply`
 
-  $$T_t(H) le S_t$$
+  $$T_t(H) \le S_t$$
 
 - Technical — `invariant_maxDeconvertCannotExceedBalance`
 
-  $$operatorname{maxDeconvert}_t(H) le T_t(H)$$
+  $$\operatorname{maxDeconvert}_t(H) \le T_t(H)$$
 
 - Business — `invariant_customSupplyMatchesBacking`
 
@@ -44,15 +44,15 @@ Notation: $R_t$ = reserved assets, $A_t$ = total assets, $S_t$ = total vault sha
 
 - Technical — `invariant_reserveBounded`
 
-  $$R_t le A_t$$
+  $$R_t \le A_t$$
 
 - Technical — `invariant_handlerBalanceBounded`
 
-  $$V_t(H) le S_t$$
+  $$V_t(H) \le S_t$$
 
 - Business — `invariant_assetsCoverSupply`
 
-  $$A_t ge S_t$$
+  $$A_t \ge S_t$$
 
 - Business — `invariant_supplyConserved`
 
@@ -71,7 +71,7 @@ Notation: $S_t$ = total supply, $a_t$ and $b_t$ = balances of actors A and B, $S
 
 - Technical — `invariant_actorBalancesBounded`
 
-  $$orall x in {a,b}: ; x_t le S_t$$
+  $$\forall x \in \{a,b\}: \; x_t \le S_t$$
 
 - Business — `invariant_supplyStable`
 
@@ -86,7 +86,7 @@ Notation: $P_t$ = configured `(vbToken, underlyingToken)` pair, $G_t$ = configur
 
 - Technical — `invariant_configurationIsStable`
 
-  $$P_t(L,mathrm{nativeConverter}) = P_0(L,mathrm{nativeConverter})$$
+  $$P_t(L,\mathrm{nativeConverter}) = P_0(L,\mathrm{nativeConverter})$$
 
 - Technical — `invariant_bridgeOnlyDispatchesConfiguredPair`
 
@@ -94,7 +94,7 @@ Notation: $P_t$ = configured `(vbToken, underlyingToken)` pair, $G_t$ = configur
 
 - Business — `invariant_completedMessagesUseConfiguredNetwork`
 
-  $$mathrm{completeCalls}_t > 0 ;Rightarrow; mathrm{lastOriginNetwork}_t = L$$
+  $$\mathrm{completeCalls}_t > 0 \Rightarrow \mathrm{lastOriginNetwork}_t = L$$
 
 ## 5. Agglayer custom token
 
@@ -109,7 +109,7 @@ Notation: $S_t$ = token supply, $h_t$ and $q_t$ = handler/recipient balances, $G
 
 - Technical — `invariant_balancesBoundedBySupply`
 
-  $$orall x in {h,q}: ; x_t le S_t$$
+  $$\forall x \in \{h,q\}: \; x_t \le S_t$$
 
 - Business — `invariant_supplyConserved`
 
