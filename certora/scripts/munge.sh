@@ -1,1 +1,0 @@
-git apply ./certora/patches/VaultBridgeToken.patch
